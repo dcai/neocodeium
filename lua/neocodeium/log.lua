@@ -4,8 +4,8 @@ local fn = vim.fn
 local uv = vim.uv
 
 ---Log file
-local logfile = fn.tempname() .. "-neocodeium.log"
-local min_log_level = vim.env.NEOCODEIUM_LOG_LEVEL or "warn"
+local logfile = vim.fn.stdpath("log") .. "/neocodeium.log"
+local min_log_level = vim.env.NEOCODEIUM_LOG_LEVEL or "trace"
 
 ---Appends newline to `msg` if it doesn't end with it
 ---@param msg string
